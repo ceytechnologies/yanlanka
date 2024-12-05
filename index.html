@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Bus Tracking</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <!-- Fixed Header -->
+  <header class="bg-white shadow fixed top-0 left-0 w-full z-10">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="flex items-center">
+        <img src="logo.png" alt="Chalo Logo" class="h-8 w-8">
+        <span class="ml-2 text-blue-500 font-bold text-lg ">Logo</span>
+      </div>
+
+      <!-- Hamburger Menu (Mobile) -->
+      <div class="md:hidden flex items-center">
+        <button id="hamburger-btn" class="text-gray-700 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex">
+        <ul class="flex space-x-4">
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Home</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Mobile Pass</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Mobile Ticket</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg fixed inset-0 z-20">
+    <div class="flex justify-end p-4">
+      <button id="close-btn" class="text-gray-700">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
+    <div class="flex justify-center">
+      <ul class="space-y-6 text-center">
+        <li><a href="#" class="text-gray-700 hover:text-blue-500 block py-2 px-4">Chalo App</a></li>
+        <li><a href="#" class="text-gray-700 hover:text-blue-500 block py-2 px-4">Mobile Pass</a></li>
+        <li><a href="#" class="text-gray-700 hover:text-blue-500 block py-2 px-4">Mobile Ticket</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto flex flex-col md:flex-row items-center px-6 h-screen pt-20 mb-6">
+    <!-- Left Side - Image -->
+    <div class="w-full md:w-1/2">
+      <img src=" " alt="Phone Mockup" class="mx-auto md:max-w-sm">
+    </div>
+    <!-- Right Side - Text -->
+    <div class="w-full md:w-1/2 mt-6 md:mt-0 text-center md:text-left">
+      <h1 class="text-2xl md:text-5xl font-bold text-gray-800">
+        Never Miss Your Bus Again
+      </h1>
+      <p class="text-6xl text-blue-500 font-bold mt-4">
+        Track Your Bus Live
+      </p>
+      <p class=" text-xl text-gray-600 mt-4">
+        Take control of your daily travel by knowing the live location and arrival time of your bus. Plan when to leave for the bus stop and never wait at the bus stop again.
+      </p>
+      <div class="mt-6 flex justify-center md:justify-start space-x-4">
+        <a href="#" class=" text-lg bg-blue-500 text-white font-bold px-6 py-3 rounded-md hover:bg-blue-600">
+          Download App
+        </a>
+      </div>
+    </div>
+  </main>
+  
+  <div class="container mx-auto text-center py-8">
+    <!-- Title Section with Icon -->
+    <h2 class="text-3xl font-semibold mb-16 flex items-center justify-center space-x-3">
+      <span>Why Wait At The <span class="text-blue-500">Bus Stop</span> Ever Again</span>
+    </h2>
+
+    <!-- Feature Boxes with Text Below -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"> 
+      <!-- First feature -->
+      <div class="flex flex-col items-center mb-12 sm:mb-16 lg:mb-20">
+        <div class="bg-blue-500 p-8 sm:p-10 lg:p-12 rounded-full shadow-lg text-white mb-6 mt-6">
+          <i class="fas fa-map-marker-alt text-5xl sm:text-6xl lg:text-7xl"></i>
+        </div>
+        <div>
+          <h4 class="text-xl sm:text-2xl lg:text-2xl font-bold">Track your bus live</h4> 
+          <p class="text-sm sm:text-base lg:text-lg">Know where your bus is in real-time.</p>
+        </div>
+      </div>
+
+      <!-- Second feature -->
+      <div class="flex flex-col items-center mb-12 sm:mb-16 lg:mb-20">
+        <div class="bg-blue-500 p-8 sm:p-10 lg:p-12 rounded-full shadow-lg text-white mb-6 mt-6">
+          <i class="fas fa-clock text-5xl sm:text-6xl lg:text-7xl"></i>
+        </div>
+        <div>
+          <h4 class="text-xl sm:text-2xl lg:text-2xl font-bold">Get live arrival time</h4>
+          <p class="text-sm sm:text-base lg:text-lg">See when your bus will arrive at the stop.</p>
+        </div>
+      </div>
+
+      <!-- Third feature -->
+      <div class="flex flex-col items-center mb-12 sm:mb-16 lg:mb-20">
+        <div class="bg-blue-500 p-8 sm:p-10 lg:p-12 rounded-full shadow-lg text-white mb-6 mt-6">
+          <i class="fas fa-bus text-5xl sm:text-6xl lg:text-7xl"></i>
+        </div>
+        <div>
+          <h4 class="text-xl sm:text-2xl lg:text-2xl font-bold">Never miss your bus again</h4>
+          <p class="text-sm sm:text-base lg:text-lg">Always be on time for your bus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mb-6">
+    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-2"> How to Track Your</h2>
+    <h2 class="text-4xl font-semibold text-center text-blue-500 mb-6"> Bus Live</h2>
+    
+  
+    <div class="space-y-6">
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <h3 class="text-xl font-semibold text-gray-700">3 Easy Steps</h3>
+        <ul class="space-y-4 mt-4">
+          <li class="flex items-start space-x-3">
+            <div class="flex-shrink-0">
+              <span class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center">1</span>
+            </div>
+            <div>
+              <p class="text-gray-600">Enter the route number or name in the search bar.</p>
+            </div>
+          </li>
+          <li class="flex items-start space-x-3">
+            <div class="flex-shrink-0">
+              <span class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center">2</span>
+            </div>
+            <div>
+              <p class="text-gray-600">Choose your route to track your bus live.</p>
+            </div>
+          </li>
+          <li class="flex items-start space-x-3">
+            <div class="flex-shrink-0">
+              <span class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center">3</span>
+            </div>
+            <div>
+              <p class="text-gray-600">Tap on any bus stop name to know the live arrival time of the bus on this stop.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add additional content if needed -->
+
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-wrap justify-between">
+        <div class="w-full md:w-1/2">
+          <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+          <p class="mb-2">Our offices:</p>
+          <p class="mb-2">
+            Email: 
+          </p>
+          <p class="mb-2">
+            
+          </p>
+          <p class="mb-2">
+            Phone: 
+          </p>
+          <p class="mb-2">
+            Address: 
+          </p>
+          <p class="mb-2">Email: <a href="Email" class="text-blue-400">Email</a></p>
+        </div>
+  
+        <div class="w-full md:w-1/2">
+          <h3 class="text-xl font-semibold mb-4">Social Connect</h3>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="bg-white text-gray-800 hover:bg-gray-300 p-3 rounded-full">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="bg-white text-gray-800 hover:bg-gray-300 p-3 rounded-full">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="bg-white text-gray-800 hover:bg-gray-300 p-3 rounded-full">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="bg-white text-gray-800 hover:bg-gray-300 p-3 rounded-full">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="mt-8 text-center">
+        <p class="text-gray-400 text-sm">© 2024 Code Cey, Cey Technologies. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeBtn = document.getElementById("close-btn");
+
+    hamburgerBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("hidden");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  </script>
+</body>
+</html>
